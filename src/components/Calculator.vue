@@ -11,6 +11,7 @@
           class="btn"
           v-for="item in calculatorButtonVal"
           :key="item"
+          :class="{ equal: item == '=' }"
         >
           {{ item || 0 }}
         </button>
@@ -174,7 +175,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background: #d0d0d0;
+  /* background: #d0d0d0; */
 }
 
 .container {
@@ -185,7 +186,7 @@ export default {
   max-height: 300px;
   padding: 15px;
   border-radius: 5px;
-  background: #f0f0f0;
+  background: #eae7e2;
   box-shadow: 6px 6px 10px gainsboro, -6px -6px 10px gainsboro;
 }
 
@@ -237,4 +238,7 @@ export default {
     inset -5px -5px 10px #fff;
   background: #d0d0d0;
 }
+/* .equal {
+  background: cornflowerblue;
+} */
 </style>
